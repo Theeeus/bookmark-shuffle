@@ -9,6 +9,8 @@ app.get('/', function(req,res) {
 	var random = Math.floor(Math.random() * (n - 0 + 1)) + 0;
 	var url = bookmarks[random].url;
 	res.redirect(url);
+}).catch(function () {
+     console.log("Promise Rejected");
 });
 });
 
