@@ -1,0 +1,19 @@
+{
+  "name": "shuffle",
+  "version": "1.0.0",
+  "description": "Open a different bookmark every time you access the page",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "6.9.1"
+  },
+  "dependencies": {
+    "browser-bookmarks": "^0.3.0",
+    "express": "^4.14.0"
+  }
+}
