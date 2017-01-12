@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var port = process.env.PORT || 8080;
 
-app.get('/go', function(req,res) {
+app.get('/', function(req,res) {
 	browserBookmarks.getChrome().then(function(bookmarks){
 	var n = bookmarks.length;
 	var ind = Math.floor(Math.random() * n);
