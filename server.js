@@ -6,9 +6,9 @@ var port = process.env.PORT || 8080;
 app.get('/', function(req,res) {
 	browserBookmarks.getChrome().then(function(bookmarks){
 	var n = bookmarks.length;
-	var random = Math.floor(Math.random() * (n - 0 + 1)) + 0;
-	var url = bookmarks[random].url;
-	res.send(url);
+	var ind = Math.floor(Math.random() * n);
+	var url = bookmarks[ind].url;
+	res.redirect(url);
 }).catch(function () {
      console.log("Promise Rejected");
 });
